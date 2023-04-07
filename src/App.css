@@ -1,38 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Tilt Warp';
+}
+
+body,
+html {
+  margin: 0;
+}
+
 .App {
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.word-area-container {
+  width: 500px;
+  height: 600px;
+  border: 1px solid #555;
+}
+
+.box-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 44px;
+}
+
+.box {
+  border: 1px solid #555;
+  width: 20%;
+  padding: 1rem;
+  margin: 0.33rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+}
+
+.box.exact {
+  background-color: teal;
+}
+
+.box.contains {
+  background-color: #cf5d00;
+}
+
+.new-word-time {
+  color: #ccc;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.all-results-button {
+  margin-top: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 2rem;
+  border: 0;
+  cursor: pointer;
+  font-size: large;
+  transition: 0.2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.all-results-button:hover {
+  background-color: #aaa;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.display-block {
+  display: block;
+}
+.display-none {
+  display: none;
+}
+
+.ar-container {
+  background-color: #333;
+  color: #fff;
+  width: 600px;
+  height: 350px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
+  border: 2px solid #fff;
+}
+
+.res-each-row {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  margin-top:0.1rem;
+  background-color: #555;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.res-each-row:first-child {
+  margin-top: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.res-box-element {
+  width: 20px;
+  height: 20px;
+  background-color:lightgreen;
+  margin-right: 1px;
+}
+
+.res-box-element:first-child {
+  margin-left: 3rem;
 }
